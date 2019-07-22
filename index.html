@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/20/2019-7-20-尝试搭建hexo博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/20/搭建hexo博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="祀念">
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/07/20/2019-7-20-尝试搭建hexo博客/" itemprop="url">2019-7-20 尝试搭建hexo博客</a></h1>
+                <a class="post-title-link" href="/2019/07/20/搭建hexo博客/" itemprop="url">搭建hexo博客</a></h1>
         
 
         <div class="post-meta">
@@ -269,7 +269,14 @@
 
             
           </span>
-
+          
+            <span class="post-updated">
+              &nbsp; | &nbsp; Updated on
+              <time itemprop="dateUpdated" datetime="2019-07-22T23:55:00+08:00" content="2019-07-22">
+                2019-07-22
+              </time>
+            </span>
+          
           
 
           
@@ -299,42 +306,16 @@
 
       
         
-          
-            <h3 id="如何搭建属于自己的github博客"><a href="#如何搭建属于自己的github博客" class="headerlink" title="如何搭建属于自己的github博客"></a>如何搭建属于自己的github博客</h3><h4 id="4月份搞了一通，也没搞明白"><a href="#4月份搞了一通，也没搞明白" class="headerlink" title="4月份搞了一通，也没搞明白"></a><em>4月份搞了一通，也没搞明白</em></h4><p>4月份基于hexo搭了个博客放在了GitHub，然后就一直没管。。</p>
+          <h2 id="搭建属于自己的github博客的迭代过程"><a href="#搭建属于自己的github博客的迭代过程" class="headerlink" title="搭建属于自己的github博客的迭代过程"></a>搭建属于自己的github博客的迭代过程</h2><h3 id="2019-4"><a href="#2019-4" class="headerlink" title="2019.4"></a><strong>2019.4</strong></h3><p><strong>4月份基于hexo搭了个博客放在了GitHub，然后就一直没管</strong></p>
 <p>博客地址：<a href="https://siniangy.github.io/" target="_blank" rel="noopener">https://siniangy.github.io/</a></p>
 <p>参考文章：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/26625249</a></p>
-<p>hexo的一些命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean // 清除缓存</span><br><span class="line">hexo new &apos;articalName&apos; === hexo n &apos;articalName&apos; // 新博客内容</span><br><span class="line">hexo generate === hexo g // 生成</span><br><span class="line">hexo server === hexo s // 启动服务预览</span><br><span class="line">hexo deploy === hexo d // 部署</span><br></pre></td></tr></table></figure>
-
-<h4 id="7月19号换电脑再装一遍"><a href="#7月19号换电脑再装一遍" class="headerlink" title="7月19号换电脑再装一遍"></a><em>7月19号换电脑再装一遍</em></h4><p>npm查看已安装的包，发现mac电脑上没有hexo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list -g --depth 0</span><br></pre></td></tr></table></figure>
-
-<p>好像要把hexo再重新安装一遍</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo</span><br><span class="line">mkdir hexo </span><br><span class="line">hexo init</span><br><span class="line">cnpm install hexo-deployer-git --save</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>上线成功，接下来更换next主题，下载速度超慢！！</p>
-<ul>
-<li>可能要安30分钟啊啊啊啊</li>
-<li>我觉得要下载一个小时</li>
-<li>下载失败了啊</li>
-<li>换一个轻量点的主题fexo</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br><span class="line">git clone git@github.com:forsigner/fexo.git themes/fexo</span><br></pre></td></tr></table></figure>
-
-<p>git clone我选择死亡，直接下载了源文件装到了theme文件夹下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">修改站点的_config.yml 主题为next</span><br><span class="line">修改next的_config.yml theme为Mist</span><br></pre></td></tr></table></figure>
-
-<p>尝试写一篇文章，执行命令如下</p>
-<ul>
-<li>hexo -n ‘2019.7.20 搭建hexo博客’</li>
-<li>复制此md文件上去</li>
-<li>hexo clean</li>
-<li>hexo g</li>
-<li>hexo s</li>
-<li>hexo d</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/20/搭建hexo博客/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
